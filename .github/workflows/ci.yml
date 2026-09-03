@@ -1,0 +1,42 @@
+name: Peblo TV Mini CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Backend Dependencies
+        run: |
+          cd backend
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Backend Pytest Suite
+        run: |
+          cd backend
+          python -m pytest
+
+      - name: Build Docker Container Images
+        run: |
+          docker compose build
+
+      - name: Production Cloud Deployment Step (Explained)
+        run: |
+          echo "Production Deployment Strategy:"
+          echo "1. Backend API containers deploy to Google Cloud Run / AWS ECS via image tags."
+          echo "2. Static Catalogue File (catalogue.json) is published to Cloudflare R2 / AWS S3."
+          echo "3. Viewer UI static React bundle deploys directly to Cloudflare Pages / Vercel."

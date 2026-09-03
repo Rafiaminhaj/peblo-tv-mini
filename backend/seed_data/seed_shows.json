@@ -1,0 +1,70 @@
+{
+  "shows": [
+    {
+      "title": "Moti's Many Lives",
+      "description": "Join Moti the magical dog on epic adventures across Rajasthan, exploring history, culture, and life lessons.",
+      "section": "Animated Stories",
+      "category": "Adventure",
+      "seasons": [
+        {
+          "season_number": 0,
+          "title": "Trailers & Teasers",
+          "episodes": [
+            {
+              "episode_number": 1,
+              "title": "Moti in Rajasthan Trailer",
+              "synopsis": "Official Teaser Trailer for Season 1.",
+              "duration_seconds": 60,
+              "content_group": "moti_trailer_1",
+              "language": "en"
+            }
+          ]
+        },
+        {
+          "season_number": 1,
+          "title": "Season 1: Rajasthan Saga",
+          "episodes": [
+            {
+              "episode_number": 1,
+              "title": "Episode 1 - Moti in Rajasthan",
+              "synopsis": "Moti arrives in Jaipur and discovers a secret royal map.",
+              "duration_seconds": 600,
+              "content_group": "moti_ep1",
+              "language": "en"
+            },
+            {
+              "episode_number": 1,
+              "title": "एपिसोड 1 - मोती राजस्थान में",
+              "synopsis": "मोती जयपुर पहुँचता है और एक गुप्त शाही नक्शा खोजता है।",
+              "duration_seconds": 600,
+              "content_group": "moti_ep1",
+              "language": "hi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Curious Kid Chronicles",
+      "description": "Interactive science and math puzzles solved by kids using everyday household items.",
+      "section": "Learning",
+      "category": "Science",
+      "seasons": [
+        {
+          "season_number": 1,
+          "title": "Season 1: Physics Magic",
+          "episodes": [
+            {
+              "episode_number": 1,
+              "title": "Why is the Sky Blue?",
+              "synopsis": "Exploring Rayleigh scattering with water and milk experiment.",
+              "duration_seconds": 450,
+              "content_group": "curious_ep1",
+              "language": "en"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

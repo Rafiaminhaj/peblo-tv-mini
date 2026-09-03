@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./peblo_tv.db
+      - STORAGE_PROVIDER=local
+    volumes:
+      - ./backend/storage:/app/storage
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  cms-ui:
+    build: ./cms-ui
+    ports:
+      - "3001:3001"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+
+  viewer-ui:
+    build: ./viewer-ui
+    ports:
+      - "3002:3002"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
