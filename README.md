@@ -3,6 +3,7 @@
 > **Take-Home Challenge Submission for Full-Stack Platform Engineer (Python/FastAPI + React)**  
 > **Candidate**: Rafia Minhaj  
 > **Global Rank #29 GSSoC 2026** | **Google Cloud & Azure Certified**  
+> 🌐 **Live Vercel Deployment:** [https://peblo-tv-mini.vercel.app](https://peblo-tv-mini.vercel.app)  
 > 🎥 **Live Video Demonstration & Walkthrough:** [Watch Peblo TV Mini Video Walkthrough (Google Drive)](https://drive.google.com/file/d/1I8HT0hnHkU3jeGkAkLI5BfdWAtIcSgzn/view?usp=sharing)
 
 ---
