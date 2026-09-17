@@ -29,11 +29,13 @@ jobs:
       - name: Run Backend Pytest Suite
         run: |
           cd backend
-          python -m pytest
+          PYTHONPATH=. python -m pytest
 
       - name: Build Docker Container Images
         run: |
           docker build -t peblo-tv-backend ./backend
+          docker build -t peblo-tv-cms ./cms-ui
+          docker build -t peblo-tv-viewer ./viewer-ui
 
       - name: Production Cloud Deployment Step (Explained)
         run: |
@@ -41,4 +43,3 @@ jobs:
           echo "1. Backend API containers deploy to Google Cloud Run / AWS ECS via image tags."
           echo "2. Static Catalogue File (catalogue.json) is published to Cloudflare R2 / AWS S3."
           echo "3. Viewer UI static React bundle deploys directly to Cloudflare Pages / Vercel."
-
